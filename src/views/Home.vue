@@ -58,20 +58,19 @@ body {
 
 .box {
   width: em(568);
-  height: 320px;
+  height: em(320);
   @include breakpoint($tb) {
-    width: 768px;
-    height: 432px;
+    width: em(768);
+    height: em(432);
   }
   @include breakpoint($lg) {
-    width: 1024px;
-    height: 576px;
+    width: em(1024);
+    height: em(576);
   }
   @include breakpoint($xl) {
-    width: 1280px;
-    height: 720px;
+    width: em(1280);
+    height: em(720);
   }
-  // padding-bottom: -56.25%;
   background-color: blue;
 }
 </style>

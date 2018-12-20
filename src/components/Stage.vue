@@ -1,22 +1,14 @@
 <template>
   <div class="stage">
-    <!-- <JoyCon
-      side="left">
-    </JoyCon> -->
     <Screen></Screen>
-    <!-- <JoyCon
-      side="right">
-    </JoyCon> -->
   </div>
 </template>
 
 <script>
-// import JoyCon from '@/components/JoyCon.vue';
 import Screen from '@/components/Screen.vue';
 
 export default {
   components: {
-    // JoyCon,
     Screen
   }
 };
