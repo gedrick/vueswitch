@@ -22,6 +22,14 @@ export default {
         {
           id: 1,
           name: 'Geddy'
+        },
+        {
+          id: 2,
+          name: 'Bob'
+        },
+        {
+          id: 3,
+          name: 'Luca'
         }
       ]
     };
@@ -35,13 +43,5 @@ export default {
 .profiles {
   margin-left: em(20);
   display: flex;
-
-  &__user {
-    border-radius: 100%;
-    width: em(30);
-    height: em(30);
-    background-color: #000;
-    margin-left: em(5);
-  }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="profile">
-    <div class="profile__user">
+    <div class="profile__icon">
       <div class="profile__user-letter">{{name.substring(0, 1)}}</div>
     </div>
   </div>
@@ -17,15 +17,17 @@ export default {
 @import './../styles/variables.scss';
 
 .profile {
-  &__user {
+  &__icon {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 100%;
     width: em(30);
     height: em(30);
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    margin-right: em(5);
   }
 
   &__user-letter {
