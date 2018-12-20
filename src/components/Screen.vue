@@ -52,8 +52,6 @@ $bezelSize: 20; // px
     display: grid;
     flex-direction: column;
     grid-template-rows: 15% 65% 20%;
-    // justify-content: space-between;
-    // align-items: stretch;
   }
 
   &__header {

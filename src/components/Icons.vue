@@ -1,6 +1,8 @@
 <template>
   <div class="icons">
-    Icons!
+    <div class="icons__icon">8:12<span>pm</span></div>
+    <div class="icons__icon">S</div>
+    <div class="icons__icon">BATTERY</div>
   </div>
 </template>
 
@@ -14,6 +16,19 @@ export default {
 @import './../styles/variables.scss';
 
 .icons {
-  background-color: chocolate;
+  margin-right: em(20);
+  color: #fff;
+  font-family: $base;
+  display: flex;
+
+  &__icon {
+    font-size: em(12);
+    margin-left: em(5);
+
+    span {
+      text-transform: uppercase;
+      font-size: em(10);
+    }
+  }
 }
 </style>
