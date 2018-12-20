@@ -7,7 +7,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import Stage from '@/components/Stage.vue';
 
 export default {
@@ -47,7 +46,7 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(-45deg, #0074df, #0257a4);
+  background-image: linear-gradient(-45deg, #0074df, #003f78);
 }
 
 .home {
@@ -60,6 +59,8 @@ body {
 .box {
   width: em(568);
   height: em(320);
+  max-height: 80vh;
+
   @include breakpoint($tb) {
     width: em(768);
     height: em(432);
