@@ -9,25 +9,22 @@
 </template>
 
 <script>
-import Profiles from '@/components/Profiles.vue';
-
 export default {
-  components: {
-    Profiles
-  }
+  name: 'Screen'
 };
 </script>
 
 <style lang="scss" scoped>
 @import './../styles/variables.scss';
 
+$bezelSize: 20; // px
 .screen {
   width: 100%;
   height: 100%;
 
   &__bezel {
-    padding: em(20);
-    height: calc(100% - 40px);
+    padding: em($bezelSize);
+    height: calc(100% - (#{$bezelSize}px * 2));
     background-color: #000;
   }
 

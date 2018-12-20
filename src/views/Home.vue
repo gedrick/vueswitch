@@ -47,6 +47,7 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
+  background-image: linear-gradient(-45deg, #0074df, #0257a4);
 }
 
 .home {
@@ -71,6 +72,5 @@ body {
     width: em(1280);
     height: em(720);
   }
-  background-color: blue;
 }
 </style>
