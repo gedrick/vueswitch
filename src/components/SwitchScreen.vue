@@ -1,7 +1,7 @@
 <template>
   <div class="switch-screen">
     <div class="switch-screen__inner">
-
+      Screen!
     </div>
   </div>
 </template>
