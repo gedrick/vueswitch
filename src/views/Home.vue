@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div class="container">
     <SwitchContainer></SwitchContainer>
   </div>
 </template>
@@ -25,7 +25,7 @@ body {
   background-image: linear-gradient(-45deg, #0074df, #003f78);
 }
 
-.box {
+.container {
   // transform: scale(1.5);
   position: relative;
   display: block;

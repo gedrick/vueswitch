@@ -2,7 +2,7 @@
   <div class="switch-container">
     <JoyConLeft :keyStatus="keyStatus.dPadLeft"></JoyConLeft>
     <JoyConRight :keyStatus="keyStatus.dPadRight"></JoyConRight>
-    <ScreenOuter></ScreenOuter>
+    <SwitchScreen></SwitchScreen>
   </div>
 </template>
 
@@ -10,13 +10,13 @@
 <script>
 import JoyConLeft from '@/components/JoyConLeft.vue';
 import JoyConRight from '@/components/JoyConRight.vue';
-import ScreenOuter from '@/components/ScreenOuter.vue';
+import SwitchScreen from '@/components/SwitchScreen.vue';
 
 export default {
   components: {
     JoyConLeft,
     JoyConRight,
-    ScreenOuter
+    SwitchScreen
   },
   data() {
     return {
