@@ -1,7 +1,7 @@
 <template>
   <div class="switch-container">
-    <JoyConLeft :keyStatus="leftKeyStatus"></JoyConLeft>
-    <JoyConRight></JoyConRight>
+    <JoyConLeft :keyStatus="keyStatus.dPadLeft"></JoyConLeft>
+    <JoyConRight :keyStatus="keyStatus.dPadRight"></JoyConRight>
     <ScreenOuter></ScreenOuter>
   </div>
 </template>
@@ -22,31 +22,19 @@ export default {
     return {
       keyStatus: {
         dPadLeft: {
-          top: false,
-          bottom: false,
+          up: false,
+          down: false,
           left: false,
           right: false
         },
         dPadRight: {
-          top: false,
-          bottom: false,
+          up: false,
+          down: false,
           left: false,
           right: false
         }
       }
     };
-  },
-  computed: {
-    leftKeyStatus() {
-      return {
-        dPad: {
-          top: false,
-          bottom: false,
-          left: false,
-          right: false
-        }
-      };
-    }
   },
   mounted() {
     window.addEventListener('keydown', this.processKeyEvent.bind(this));
@@ -54,11 +42,10 @@ export default {
   },
   methods: {
     processKeyEvent(e) {
-      const key = e.key;
       const val = e.type === 'keydown';
-      switch (key) {
+      switch (e.key) {
         case 'w':
-          this.keyStatus.dPadLeft.top = val;
+          this.keyStatus.dPadLeft.up = val;
           break;
         case 'a':
           this.keyStatus.dPadLeft.left = val;
@@ -70,7 +57,7 @@ export default {
           this.keyStatus.dPadLeft.right = val;
           break;
         case 'ArrowUp':
-          this.keyStatus.dPadRight.top = val;
+          this.keyStatus.dPadRight.up = val;
           break;
         case 'ArrowLeft':
           this.keyStatus.dPadRight.left = val;
@@ -97,7 +84,7 @@ export default {
   left: 10%;
 }
 
-.d-pad-top {
+.d-pad-up {
   position: absolute;
   height: 30%;
   width: 30%;
@@ -107,7 +94,7 @@ export default {
   border-radius: 50%;
 }
 
-.d-pad-bottom {
+.d-pad-down {
   position: absolute;
   height: 30%;
   width: 30%;
@@ -135,5 +122,11 @@ export default {
   top: 35%;
   background: black;
   border-radius: 50%;
+}
+
+.d-pad-button {
+  &--on {
+    background-color: blue;
+  }
 }
 </style>

@@ -3,10 +3,10 @@
     <div class="analog-right"></div>
     <div class="circle-button-right"></div>
     <div class="d-pad-container-right">
-      <div class="d-pad-top"></div>
-      <div class="d-pad-left"></div>
-      <div class="d-pad-right"></div>
-      <div class="d-pad-bottom"></div>
+      <div :class="{'d-pad-button--on': keyStatus.up}" class="d-pad-button d-pad-up"></div>
+      <div :class="{'d-pad-button--on': keyStatus.left}" class="d-pad-button d-pad-left"></div>
+      <div :class="{'d-pad-button--on': keyStatus.right}" class="d-pad-button d-pad-right"></div>
+      <div :class="{'d-pad-button--on': keyStatus.down}" class="d-pad-button d-pad-down"></div>
     </div>
     <div class="d-pad-2-container">
       <div class="d-pad-2-vertical"></div>
@@ -14,6 +14,14 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'JoyConRight',
+  props: ['keyStatus']
+};
+</script>
+
 
 <style lang="scss" scoped>
 .joy-con-right {

@@ -3,10 +3,10 @@
     <div class="ellipse-button"></div>
     <div class="analog-left"></div>
     <div class="d-pad-container-left">
-      <div :class="{'d-pad-top--on': keyStatus.dPad.top}" class="d-pad-top"></div>
-      <div :class="{'d-pad-left--on': keyStatus.dPad.left}" class="d-pad-left"></div>
-      <div :class="{'d-pad-right--on': keyStatus.dPad.right}" class="d-pad-right"></div>
-      <div :class="{'d-pad-bottom--on': keyStatus.dPad.bottom}" class="d-pad-bottom"></div>
+      <div :class="{'d-pad-button--on': keyStatus.up}" class="d-pad-button d-pad-up"></div>
+      <div :class="{'d-pad-button--on': keyStatus.left}" class="d-pad-button d-pad-left"></div>
+      <div :class="{'d-pad-button--on': keyStatus.right}" class="d-pad-button d-pad-right"></div>
+      <div :class="{'d-pad-button--on': keyStatus.down}" class="d-pad-button d-pad-down"></div>
     </div>
     <div class="square-button"></div>
   </div>
@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  name: 'JoyConLeft',
   props: ['keyStatus']
 };
 </script>

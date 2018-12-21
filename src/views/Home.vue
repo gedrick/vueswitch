@@ -8,31 +8,9 @@
 import SwitchContainer from '@/components/SwitchContainer.vue';
 
 export default {
+  name: 'Home',
   components: {
     SwitchContainer
-  },
-  name: 'home',
-  data: () => {
-    return {
-      isMounted: false
-    };
-  },
-  mounted() {
-    this.isMounted = true;
-  },
-  computed: {
-    width() {
-      if (!this.isMounted) {
-        return null;
-      }
-      return this.$el.offsetWidth;
-    },
-    height() {
-      if (!this.isMounted) {
-        return null;
-      }
-      return this.$el.offsetHeight;
-    }
   }
 };
 </script>
@@ -48,6 +26,7 @@ body {
 }
 
 .box {
+  // transform: scale(1.5);
   position: relative;
   display: block;
   margin: auto;
