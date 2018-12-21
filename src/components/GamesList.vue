@@ -1,9 +1,12 @@
 <template>
   <div class="games-list">
-    <Game
-      v-for="game in games"
-      v-bind:key="game.id">
-    </Game>
+    <div class="games-list__container">
+      <Game
+        v-for="game in games"
+        :game="game"
+        v-bind:key="game.id">
+      </Game>
+    </div>
   </div>
 </template>
 
@@ -20,7 +23,20 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/styles/variables.scss';
+
 .games-list {
-  background-color: red;
+  width: 100%;
+  height: 100%;
+  padding-left: em(20);
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: flex;
+  }
 }
 </style>
