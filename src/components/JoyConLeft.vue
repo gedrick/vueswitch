@@ -32,8 +32,8 @@ export default {
 .ellipse-button {
   position: absolute;
   height: 3%;
-  width: 30%;
-  top: 8%;
+  width: 19%;
+  top: 6%;
   right: 5%;
   background: black;
   border-radius: 50px;
