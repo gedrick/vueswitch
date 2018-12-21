@@ -7,7 +7,9 @@
           <Icons></Icons>
         </div>
         <div class="screen__content">
-          <GamesList></GamesList>
+          <GamesList
+            :games="games">
+          </GamesList>
         </div>
         <div class="screen__footer">
           Footer
@@ -18,15 +20,51 @@
 </template>
 
 <script>
-import GamesList from '@/components/GamesList.vue';
 import Profiles from '@/components/Profiles.vue';
 import Icons from '@/components/Icons.vue';
+import GamesList from '@/components/GamesList.vue';
 
 export default {
   components: {
-    GamesList,
     Profiles,
-    Icons
+    Icons,
+    GamesList
+  },
+  data() {
+    return {
+      games: [
+        {
+          id: 1,
+          name: 'Legend of Zelda: Breath of the Wild',
+          image: 'http://via.placeholder.com/255'
+        },
+        {
+          id: 2,
+          name: 'Snipperclips',
+          image: 'http://via.placeholder.com/255'
+        },
+        {
+          id: 3,
+          name: 'Super Mario Odyssey',
+          image: 'http://via.placeholder.com/255'
+        },
+        {
+          id: 4,
+          name: 'PicrossS',
+          image: 'http://via.placeholder.com/255'
+        },
+        {
+          id: 5,
+          name: 'Pokemon: Lets Go Pikachu!',
+          image: 'http://via.placeholder.com/255'
+        },
+        {
+          id: 6,
+          name: 'IMPLOSION',
+          image: 'http://via.placeholder.com/255'
+        }
+      ]
+    };
   }
 };
 </script>
@@ -43,6 +81,7 @@ $bezelSize: 20; // px
     padding: em($bezelSize);
     height: calc(100% - (#{$bezelSize}px * 2));
     background-color: #000;
+    border-radius: em(5);
   }
 
   &__inside {
@@ -60,8 +99,11 @@ $bezelSize: 20; // px
     align-items: center;
   }
 
+  $padding: 20;
   &__content {
-    background-color: red;
+    display: flex;
+    padding: em($padding) 0;
+    height: calc(100% - (#{$padding}px * 2));
   }
 
   &__footer {

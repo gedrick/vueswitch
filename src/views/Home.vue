@@ -1,17 +1,15 @@
 <template>
-  <div class="home">
-    <div class="box">
-      <Stage></Stage>
-    </div>
+  <div class="box">
+    <SwitchContainer></SwitchContainer>
   </div>
 </template>
 
 <script>
-import Stage from '@/components/Stage.vue';
+import SwitchContainer from '@/components/SwitchContainer.vue';
 
 export default {
   components: {
-    Stage
+    SwitchContainer
   },
   name: 'home',
   data: () => {
@@ -49,29 +47,14 @@ body {
   background-image: linear-gradient(-45deg, #0074df, #003f78);
 }
 
-.home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
 .box {
-  width: em(568);
-  height: em(320);
-  max-height: 80vh;
-
-  @include breakpoint($tb) {
-    width: em(768);
-    height: em(432);
-  }
-  @include breakpoint($lg) {
-    width: em(1024);
-    height: em(576);
-  }
-  @include breakpoint($xl) {
-    width: em(1280);
-    height: em(720);
-  }
+  position: relative;
+  display: block;
+  margin: auto;
+  margin-top: 8%;
+  background: none;
+  border: none;
+  height: 45vw;
+  width: 80vw;
 }
 </style>
