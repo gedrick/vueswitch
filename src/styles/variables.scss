@@ -15,7 +15,16 @@ $tb: 1024px;
 $lg: 1200px;
 $xl: 1440px;
 
+// Game boxes
+$game-size: 15vw;
+
 // Functions
 @function em($pixels, $context: $browser-context) {
   @return #{$pixels/$context}em;
+}
+
+@mixin alignCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -25,11 +25,13 @@ export default {
       gamesList: [
         {
           id: 1,
-          title: 'Game 1'
+          title: 'Game 1',
+          image: 'https://via.placeholder.com/255'
         },
         {
           id: 2,
-          title: 'Game 2'
+          title: 'Game 2',
+          image: 'https://via.placeholder.com/255'
         }
       ]
     };
