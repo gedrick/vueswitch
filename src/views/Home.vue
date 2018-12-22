@@ -19,6 +19,8 @@ export default {
 @import './../styles/variables.scss';
 
 body {
+  overflow: hidden;
+  height: 100vh;
   font-size: 16px;
   margin: 0;
   padding: 0;
@@ -26,14 +28,14 @@ body {
 }
 
 .container {
-  // transform: scale(1.5);
+  // transform: scale(1.3);
   position: relative;
   display: block;
   margin: auto;
   margin-top: 8%;
   background: none;
   border: none;
-  height: 45vw;
-  width: 80vw;
+  height: 50.63vw;
+  width: 90vw;
 }
 </style>
