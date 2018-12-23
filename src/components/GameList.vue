@@ -1,6 +1,6 @@
 <template>
   <div class="game-list" :class="'game-list--' + rows + 'row'">
-    <div class="game-list__container">
+    <div ref="gameList" class="game-list__container">
       <Game
         v-for="game in games"
         :game="game"
@@ -19,7 +19,26 @@ export default {
   components: {
     Game
   },
-  props: ['games', 'rows']
+  props: ['games', 'rows'],
+  data() {
+    return {
+      boundHandleScroll: this.handleScroll.bind(this)
+    };
+  },
+  mounted() {
+    this.$refs.gameList.addEventListener('mousewheel', this.boundHandleScroll);
+  },
+  destroyed() {
+    this.$refs.gameList.removeEventListener(
+      'mousewheel',
+      this.boundHandleScroll
+    );
+  },
+  methods: {
+    handleScroll(e) {
+      this.$refs.gameList.scrollLeft += e.deltaY;
+    }
+  }
 };
 </script>
 
