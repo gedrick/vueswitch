@@ -2,12 +2,11 @@
   <div class="screen-header">
     <div class="screen-header__expand" @click="expand"></div>
     <div class="screen-header__contract" @click="contract">
-      <div class="screen-header__contract-square">&nbsp;</div>
-      <div class="screen-header__contract-square">&nbsp;</div>
-      <div class="screen-header__contract-square">&nbsp;</div>
-      <div class="screen-header__contract-square">&nbsp;</div>
+      <div class="screen-header__contract-square"></div>
+      <div class="screen-header__contract-square"></div>
+      <div class="screen-header__contract-square"></div>
+      <div class="screen-header__contract-square"></div>
     </div>
-    Header!
   </div>
 </template>
 
@@ -24,7 +23,6 @@ export default {
   }
 };
 </script>
-
 
 <style lang="scss" scoped>
 @import '../styles/variables.scss';
@@ -46,6 +44,7 @@ export default {
 
   &__contract {
     cursor: pointer;
+    margin-left: em(5);
     display: grid;
     grid-row: 50% 50%;
     grid-column: 50% 50%;
