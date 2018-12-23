@@ -32,6 +32,7 @@ export default {
 .game {
   display: grid;
   grid-template-rows: 80% 20%;
+  transition: width 0.1s ease-out, height 0.1s ease-out;
 
   &__box {
     img {
