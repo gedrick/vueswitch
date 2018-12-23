@@ -1,7 +1,10 @@
 <template>
-  <div class="game" :style="{'height': size + 'vw', 'width': size + 'vw'}">
+  <div
+    class="game"
+    :class="{'game--selected': selected}"
+    :style="{'height': size + 'vw','width': size + 'vw'}">
     <div class="game__box">
-      <img :src="game.image" :alt="game.title">
+      <img :src="gameImage" :alt="game.title">
     </div>
     <div class="game__title">
       {{game.title}}
@@ -12,7 +15,7 @@
 <script>
 export default {
   name: 'Game',
-  props: ['game', 'modifier'],
+  props: ['game', 'modifier', 'selected'],
   data() {
     return {
       baseSize: 20
@@ -21,6 +24,14 @@ export default {
   computed: {
     size() {
       return this.baseSize / this.modifier;
+    },
+    gameImage() {
+      const gameImageUrl = this.game.image;
+      if (gameImageUrl.startsWith('http')) {
+        return gameImageUrl;
+      } else {
+        return `assets/${gameImageUrl}`;
+      }
     }
   }
 };
@@ -33,6 +44,10 @@ export default {
   display: grid;
   grid-template-rows: 80% 20%;
   transition: width 0.1s ease-out, height 0.1s ease-out;
+
+  &--selected {
+    border: em(2) solid cyan;
+  }
 
   &__box {
     img {

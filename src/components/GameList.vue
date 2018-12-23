@@ -2,8 +2,9 @@
   <div class="game-list" :class="'game-list--' + rows + 'row'">
     <div ref="gameList" class="game-list__container">
       <Game
-        v-for="game in games"
+        v-for="(game, index) in games"
         :game="game"
+        :selected="index === 0"
         :modifier="rows"
         :key="game.id">
       </Game>
@@ -42,7 +43,6 @@ export default {
 };
 </script>
 
-
 <style lang="scss" scoped>
 @import '../styles/variables.scss';
 
@@ -56,14 +56,12 @@ export default {
   &__container {
     display: grid;
     grid-gap: em(5);
-    overflow-x: hidden;
+    overflow-x: auto;
     overflow-y: hidden;
     height: 100%;
     grid-auto-flow: column;
-  }
-
-  &--1row &__container {
-    grid-auto-columns: 40%;
+    padding-left: em(20);
+    // grid-template-rows: 100%;
   }
 
   &--2row &__container {
@@ -72,8 +70,8 @@ export default {
   }
 
   &--3row &__container {
-    grid-auto-rows: 33%;
     grid-template-rows: 33% 33% 33%;
+    grid-auto-rows: 33%;
   }
 }
 </style>
