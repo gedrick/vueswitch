@@ -6,7 +6,6 @@
   </div>
 </template>
 
-
 <script>
 import JoyConLeft from '@/components/JoyConLeft.vue';
 import JoyConRight from '@/components/JoyConRight.vue';

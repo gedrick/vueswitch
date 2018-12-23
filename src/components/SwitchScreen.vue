@@ -29,23 +29,22 @@ export default {
           id: 2,
           title: 'Game 2',
           image: 'https://via.placeholder.com/255'
-        },
-        {
-          id: 3,
-          title: 'Game 3',
-          image: 'https://via.placeholder.com/255'
-        },
-        {
-          id: 4,
-          title: 'Game 4',
-          image: 'https://via.placeholder.com/255'
         }
+        // {
+        //   id: 3,
+        //   title: 'Game 3',
+        //   image: 'https://via.placeholder.com/255'
+        // },
+        // {
+        //   id: 4,
+        //   title: 'Game 4',
+        //   image: 'https://via.placeholder.com/255'
+        // }
       ]
     };
   }
 };
 </script>
-
 
 <style lang="scss" scoped>
 .switch-screen {
@@ -64,16 +63,9 @@ export default {
     top: 5%;
     background: #c0c0c0;
     height: 90%;
+
     display: grid;
     grid-template-rows: 15% 85%;
-  }
-
-  &__header {
-    background-color: red;
-  }
-
-  &__footer {
-    background-color: white;
   }
 }
 </style>

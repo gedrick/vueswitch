@@ -36,7 +36,7 @@ body {
   margin-top: 8%;
   background: none;
   border: none;
-  height: 50.63vw;
-  width: 90vw;
+  height: 56.25vw;
+  width: 100vw;
 }
 </style>
