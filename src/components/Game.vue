@@ -31,11 +31,7 @@ export default {
 
 .game {
   display: grid;
-  grid-template-rows: 85% 15%;
-
-  // &:not(:first-of-type) {
-  //   margin-left: em(10);
-  // }
+  grid-template-rows: 80% 20%;
 
   &__box {
     img {
@@ -47,6 +43,7 @@ export default {
   &__title {
     @include alignCenter;
     color: white;
+    font-size: em(12);
   }
 }
 </style>

@@ -56,7 +56,7 @@ export default {
   &__container {
     display: grid;
     grid-gap: em(5);
-    overflow-x: scroll;
+    overflow-x: hidden;
     overflow-y: hidden;
     height: 100%;
     grid-auto-flow: column;
