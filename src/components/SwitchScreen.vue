@@ -1,9 +1,12 @@
 <template>
   <div class="switch-screen">
     <div class="switch-screen__inner">
-      <ScreenHeader></ScreenHeader>
+      <ScreenHeader
+        @expand="doExpand"
+        @contract="doContract">
+      </ScreenHeader>
       <GameList
-        :rows="2"
+        :rows="rows"
         :games="gamesList">
       </GameList>
     </div>
@@ -22,6 +25,7 @@ export default {
   },
   data() {
     return {
+      rows: 1,
       gamesList: [
         {
           id: 1,
@@ -145,6 +149,18 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    doExpand() {
+      if (this.rows > 1) {
+        this.rows--;
+      }
+    },
+    doContract() {
+      if (this.rows < 3) {
+        this.rows++;
+      }
+    }
   }
 };
 </script>
