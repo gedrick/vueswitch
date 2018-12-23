@@ -1,24 +1,21 @@
 <template>
   <div class="switch-screen">
     <div class="switch-screen__inner">
-      <div class="switch-screen__header">
-        Header!
-      </div>
+      <ScreenHeader></ScreenHeader>
       <GameList :games="gamesList"></GameList>
-      <div class="switch-screen__footer">
-        Footer!
-      </div>
     </div>
   </div>
 </template>
 
 <script>
 import GameList from './GameList.vue';
+import ScreenHeader from './ScreenHeader.vue';
 
 export default {
   name: 'SwitchScreen',
   components: {
-    GameList
+    GameList,
+    ScreenHeader
   },
   data() {
     return {
@@ -31,6 +28,16 @@ export default {
         {
           id: 2,
           title: 'Game 2',
+          image: 'https://via.placeholder.com/255'
+        },
+        {
+          id: 3,
+          title: 'Game 3',
+          image: 'https://via.placeholder.com/255'
+        },
+        {
+          id: 4,
+          title: 'Game 4',
           image: 'https://via.placeholder.com/255'
         }
       ]
@@ -58,7 +65,7 @@ export default {
     background: #c0c0c0;
     height: 90%;
     display: grid;
-    grid-template-rows: 15% 65% 20%;
+    grid-template-rows: 15% 85%;
   }
 
   &__header {

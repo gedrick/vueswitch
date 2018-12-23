@@ -24,11 +24,12 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
+  font-family: $base-font;
   background-image: linear-gradient(-45deg, #0074df, #003f78);
 }
 
 .container {
-  // transform: scale(1.3);
+  // transform: scale(1.1);
   position: relative;
   display: block;
   margin: auto;

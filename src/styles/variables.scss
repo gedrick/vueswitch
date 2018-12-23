@@ -3,7 +3,7 @@
 $browser-context: 16; // Default
 
 // Base fonts
-$base: 'Nintendo Switch UI';
+$base-font: 'Nintendo Switch UI';
 
 // JoyCon colors
 $joycon-blue: #00c3e3;
@@ -16,7 +16,7 @@ $lg: 1200px;
 $xl: 1440px;
 
 // Game boxes
-$game-size: 15vw;
+$game-size: 20vw;
 
 // Functions
 @function em($pixels, $context: $browser-context) {

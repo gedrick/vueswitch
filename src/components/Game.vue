@@ -22,9 +22,12 @@ export default {
 .game {
   width: $game-size;
   height: $game-size;
-  background-color: green;
   display: grid;
   grid-template-rows: 85% 15%;
+
+  &:not(:first-of-type) {
+    margin-left: em(10);
+  }
 
   &__box {
     background-color: cyan;
@@ -37,6 +40,7 @@ export default {
 
   &__title {
     @include alignCenter;
+    color: white;
   }
 }
 </style>
