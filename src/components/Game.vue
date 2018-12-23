@@ -1,5 +1,5 @@
 <template>
-  <div class="game">
+  <div class="game" :style="{'height': size + 'vw', 'width': size + 'vw'}">
     <div class="game__box">
       <img :src="game.image" :alt="game.title">
     </div>
@@ -12,7 +12,17 @@
 <script>
 export default {
   name: 'Game',
-  props: ['game']
+  props: ['game', 'modifier'],
+  data() {
+    return {
+      baseSize: 20
+    };
+  },
+  computed: {
+    size() {
+      return this.baseSize / this.modifier;
+    }
+  }
 };
 </script>
 
@@ -20,18 +30,14 @@ export default {
 @import '../styles/variables.scss';
 
 .game {
-  width: $game-size;
-  height: $game-size;
   display: grid;
   grid-template-rows: 85% 15%;
 
-  &:not(:first-of-type) {
-    margin-left: em(10);
-  }
+  // &:not(:first-of-type) {
+  //   margin-left: em(10);
+  // }
 
   &__box {
-    background-color: cyan;
-
     img {
       width: 100%;
       height: 100%;
