@@ -44,8 +44,8 @@ export default {
   display: grid;
   grid-template-rows: 80% 20%;
   transition-property: width, height;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   &--selected &__box {
     outline: em(2) inset cyan;
@@ -63,9 +63,6 @@ export default {
     background-color: white;
     width: 100%;
     height: 100%;
-    transition-property: position;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in;
 
     img {
       width: 100%;
