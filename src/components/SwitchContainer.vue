@@ -2,7 +2,7 @@
   <div class="switch-container">
     <JoyConLeft :keyStatus="keyStatus.dPadLeft"></JoyConLeft>
     <JoyConRight :keyStatus="keyStatus.dPadRight"></JoyConRight>
-    <SwitchScreen></SwitchScreen>
+    <SwitchScreen :games="gamesList"></SwitchScreen>
   </div>
 </template>
 
@@ -32,7 +32,129 @@ export default {
           left: false,
           right: false
         }
-      }
+      },
+      gamesList: [
+        {
+          id: 1,
+          title: 'Snipperclips',
+          image: 'snipperclips.png'
+        },
+        {
+          id: 2,
+          title: 'The Legend of Zelda: Breath of the Wild',
+          image: 'legend-of-zelda-breath-of-the-wild.png'
+        },
+        {
+          id: 3,
+          title: 'Snipperclips',
+          image: 'snipperclips.png'
+        },
+        {
+          id: 4,
+          title: 'The Legend of Zelda: Breath of the Wild',
+          image: 'legend-of-zelda-breath-of-the-wild.png'
+        },
+        {
+          id: 5,
+          title: 'Snipperclips',
+          image: 'snipperclips.png'
+        },
+        {
+          id: 6,
+          title: 'The Legend of Zelda: Breath of the Wild',
+          image: 'legend-of-zelda-breath-of-the-wild.png'
+        },
+        {
+          id: 7,
+          title: 'Snipperclips',
+          image: 'snipperclips.png'
+        },
+        {
+          id: 8,
+          title: 'Snipperclips',
+          image: 'snipperclips.png'
+        },
+        {
+          id: 9,
+          title: 'The Legend of Zelda: Breath of the Wild',
+          image: 'legend-of-zelda-breath-of-the-wild.png'
+        },
+        {
+          id: 10,
+          title: 'Snipperclips',
+          image: 'snipperclips.png'
+        },
+        {
+          id: 11,
+          title: 'The Legend of Zelda: Breath of the Wild',
+          image: 'legend-of-zelda-breath-of-the-wild.png'
+        },
+        {
+          id: 12,
+          title: 'The Legend of Zelda: Breath of the Wild',
+          image: 'legend-of-zelda-breath-of-the-wild.png'
+        },
+        {
+          id: 13,
+          title: 'Snipperclips',
+          image: 'snipperclips.png'
+        },
+        {
+          id: 14,
+          title: 'Snipperclips',
+          image: 'snipperclips.png'
+        },
+        {
+          id: 15,
+          title: 'The Legend of Zelda: Breath of the Wild',
+          image: 'legend-of-zelda-breath-of-the-wild.png'
+        },
+        {
+          id: 16,
+          title: 'Snipperclips',
+          image: 'snipperclips.png'
+        },
+        {
+          id: 17,
+          title: 'Snipperclips',
+          image: 'snipperclips.png'
+        },
+        {
+          id: 18,
+          title: 'The Legend of Zelda: Breath of the Wild',
+          image: 'legend-of-zelda-breath-of-the-wild.png'
+        },
+        {
+          id: 19,
+          title: 'Snipperclips',
+          image: 'snipperclips.png'
+        },
+        {
+          id: 20,
+          title: 'The Legend of Zelda: Breath of the Wild',
+          image: 'legend-of-zelda-breath-of-the-wild.png'
+        },
+        {
+          id: 21,
+          title: 'The Legend of Zelda: Breath of the Wild',
+          image: 'legend-of-zelda-breath-of-the-wild.png'
+        },
+        {
+          id: 22,
+          title: 'Snipperclips',
+          image: 'snipperclips.png'
+        },
+        {
+          id: 23,
+          title: 'The Legend of Zelda: Breath of the Wild',
+          image: 'legend-of-zelda-breath-of-the-wild.png'
+        },
+        {
+          id: 24,
+          title: 'Snipperclips',
+          image: 'snipperclips.png'
+        }
+      ]
     };
   },
   mounted() {

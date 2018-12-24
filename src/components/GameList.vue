@@ -52,7 +52,7 @@ $grid-gap: 3px;
 .game-list {
   @include alignCenter;
   justify-content: flex-start;
-  background-color: blue;
+  background-color: $switch-bg-color;
   overflow: hidden;
   padding-top: 5%;
 

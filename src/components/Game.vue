@@ -4,7 +4,7 @@
     :class="{'game--selected': selected, 'game--rows': rows > 1}"
     :style="{'height': size + 'vw','width': size + 'vw'}">
     <div class="game__box">
-      <!-- <img :src="gameImage" :alt="game.title"> -->
+      <img :src="gameImage" :alt="game.title">
     </div>
     <div class="game__title">
       {{game.title}}
@@ -30,7 +30,7 @@ export default {
       if (gameImageUrl.startsWith('http')) {
         return gameImageUrl;
       } else {
-        return `assets/${gameImageUrl}`;
+        return require(`@/assets/${gameImageUrl}`);
       }
     }
   }
@@ -41,14 +41,17 @@ export default {
 @import '../styles/variables.scss';
 
 .game {
+  overflow: hidden;
   display: grid;
   grid-template-rows: 80% 20%;
   transition-property: width, height;
   transition-duration: 0.4s;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 100%;
+  height: 100;
 
   &--selected &__box {
-    outline: em(2) inset cyan;
+    outline: em(2) inset red;
   }
 
   &--rows {

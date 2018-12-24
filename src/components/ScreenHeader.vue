@@ -31,7 +31,7 @@ export default {
   @include alignCenter;
   padding: em(10);
   justify-content: flex-start;
-  background-color: green;
+  background-color: $switch-bg-color;
   color: white;
 
   &__expand {
