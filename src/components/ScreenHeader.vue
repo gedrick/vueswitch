@@ -45,6 +45,10 @@ export default {
   background-color: $switch-bg-color;
   color: white;
 
+  @include breakpoint($mobile) {
+    padding: 0 em(3);
+  }
+
   &__sizing {
     display: flex;
     align-self: center;
@@ -56,6 +60,10 @@ export default {
     h2 {
       font-weight: bold;
       font-size: em(16);
+
+      @include breakpoint($mobile) {
+        font-size: em(12);
+      }
     }
   }
 

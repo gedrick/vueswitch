@@ -196,6 +196,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../styles/variables.scss';
+
 .switch-container {
   position: absolute;
   width: 80%;
@@ -203,6 +205,14 @@ export default {
   background: none;
   top: 20%;
   left: 10%;
+
+  @include breakpoint($mobile) {
+    width: 100%;
+    height: 100%;
+    top: unset;
+    left: unset;
+    position: relative;
+  }
 }
 
 .d-pad-up {
@@ -248,6 +258,13 @@ export default {
 .d-pad-button {
   &--on {
     background-color: blue;
+  }
+}
+
+@include breakpoint($mobile) {
+  .joycon-left,
+  .joycon-right {
+    display: none;
   }
 }
 </style>

@@ -38,5 +38,9 @@ body {
   border: none;
   height: 56.25vw;
   width: 100vw;
+
+  @include breakpoint($mobile) {
+    height: 100vh;
+  }
 }
 </style>
