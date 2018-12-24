@@ -1,11 +1,19 @@
 <template>
   <div class="screen-header">
-    <div class="screen-header__expand" @click="expand"></div>
-    <div class="screen-header__contract" @click="contract">
-      <div class="screen-header__contract-square"></div>
-      <div class="screen-header__contract-square"></div>
-      <div class="screen-header__contract-square"></div>
-      <div class="screen-header__contract-square"></div>
+    <div class="screen-header__sizing">
+      <div class="screen-header__expand" @click="expand"></div>
+      <div class="screen-header__contract" @click="contract">
+        <div class="screen-header__contract-square"></div>
+        <div class="screen-header__contract-square"></div>
+        <div class="screen-header__contract-square"></div>
+        <div class="screen-header__contract-square"></div>
+      </div>
+    </div>
+    <div class="screen-header__username">
+      <h2>Gedrick</h2>
+    </div>
+    <div class="screen-header__count">
+      <span v-if="gameCount">{{gameCount}} game<span v-if="gameCount > 1">s</span></span>
     </div>
   </div>
 </template>
@@ -13,6 +21,7 @@
 <script>
 export default {
   name: 'ScreenHeader',
+  props: ['gameCount'],
   methods: {
     expand() {
       this.$emit('expand');
@@ -28,11 +37,35 @@ export default {
 @import '../styles/variables.scss';
 
 .screen-header {
-  @include alignCenter;
-  padding: em(10);
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 20% calc(60% - 20px) 20%;
+  height: 100%;
+  padding: 0 em(10);
+  justify-content: space-between;
   background-color: $switch-bg-color;
   color: white;
+
+  &__sizing {
+    display: flex;
+    align-self: center;
+  }
+
+  &__username {
+    align-self: center;
+
+    h2 {
+      font-weight: bold;
+      font-size: em(16);
+    }
+  }
+
+  &__count {
+    align-self: center;
+    color: white;
+    & > span {
+      font-size: em(14);
+    }
+  }
 
   &__expand {
     cursor: pointer;

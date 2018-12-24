@@ -2,6 +2,7 @@
   <div class="switch-screen">
     <div class="switch-screen__inner">
       <ScreenHeader
+        :gameCount="games.length"
         @expand="doExpand"
         @contract="doContract">
       </ScreenHeader>
