@@ -46,10 +46,8 @@ export default {
   transition-property: width, height;
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
-  outline: em(2) inset blue;
-  background-color: white;
 
-  &--selected {
+  &--selected &__box {
     outline: em(2) inset cyan;
   }
 
@@ -62,8 +60,12 @@ export default {
   }
 
   &__box {
+    background-color: white;
     width: 100%;
     height: 100%;
+    transition-property: position;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
 
     img {
       width: 100%;
