@@ -1,10 +1,10 @@
 <template>
   <div
     class="game"
-    :class="{'game--selected': selected}"
+    :class="{'game--selected': selected, 'game--rows': rows > 1}"
     :style="{'height': size + 'vw','width': size + 'vw'}">
     <div class="game__box">
-      <img :src="gameImage" :alt="game.title">
+      <!-- <img :src="gameImage" :alt="game.title"> -->
     </div>
     <div class="game__title">
       {{game.title}}
@@ -15,7 +15,7 @@
 <script>
 export default {
   name: 'Game',
-  props: ['game', 'modifier', 'selected'],
+  props: ['game', 'rows', 'selected'],
   data() {
     return {
       baseSize: 20
@@ -23,7 +23,7 @@ export default {
   },
   computed: {
     size() {
-      return this.baseSize / this.modifier;
+      return this.baseSize / this.rows;
     },
     gameImage() {
       const gameImageUrl = this.game.image;
@@ -43,13 +43,28 @@ export default {
 .game {
   display: grid;
   grid-template-rows: 80% 20%;
-  transition: width 0.1s ease-out, height 0.1s ease-out;
+  transition-property: width, height;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  outline: em(2) inset blue;
+  background-color: white;
 
   &--selected {
-    border: em(2) solid cyan;
+    outline: em(2) inset cyan;
+  }
+
+  &--rows {
+    grid-template-rows: auto;
+  }
+
+  &--rows &__title {
+    display: none;
   }
 
   &__box {
+    width: 100%;
+    height: 100%;
+
     img {
       width: 100%;
       height: 100%;
@@ -60,6 +75,10 @@ export default {
     @include alignCenter;
     color: white;
     font-size: em(12);
+
+    &--hidden {
+      display: none;
+    }
   }
 }
 </style>
